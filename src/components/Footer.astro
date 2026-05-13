@@ -1,9 +1,24 @@
 ---
 
-import { profileConfig } from "../config";
+import { getCollection } from "astro:content";
+import { profileConfig, siteConfig } from "../config";
 import { url } from "../utils/url-utils";
 
-const currentYear = new Date().getFullYear();
+// 计算统计数据
+const allPosts = await getCollection("posts");
+const postCount = allPosts.filter((post) => !post.data.draft).length;
+
+const startDate = siteConfig.stats?.startDate
+	? new Date(siteConfig.stats.startDate)
+	: null;
+const today = new Date();
+const daysRunning = startDate
+	? Math.floor(
+			(today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
+		)
+	: 0;
+
+const currentYear = today.getFullYear();
 ---
 
 <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">-->
@@ -16,6 +31,7 @@ const currentYear = new Date().getFullYear();
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href={url('sitemap-index.xml')}>Sitemap</a><br>
         Powered by
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
-        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/saicaca/fuwari">Fuwari</a>
+        <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/saicaca/fuwari">Fuwari</a><br>
+        {daysRunning > 0 && <span>Running for {daysRunning} days with {postCount} articles</span>}
     </div>
 </div>

@@ -25,6 +25,10 @@ export const siteConfig: SiteConfig = {
 			url: "https://unsplash.com/photos/pink-cherry-blossom-under-blue-sky-during-daytime-0-oPmFrlubo", // (Optional) URL link to the original artwork or artist's page
 		},
 	},
+	// 站点统计
+	stats: {
+		startDate: "2026-01-01", // 建站日期，用于计算运行天数
+	},
 	toc: {
 		enable: true, // Display the table of contents on the right side of the post
 		depth: 2, // Maximum heading depth to show in the table, from 1 to 3
