@@ -6,7 +6,7 @@
 
 [**🌐 My Blog (Cloudflare)**](https://lingem.pages.dev)
 
-![homepage](docs/images/博客站.png)
+![homepage](docs/images/homepage.png)
 
 ## ✨ Customization
 
