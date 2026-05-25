@@ -1,6 +1,11 @@
 .expressive-code {
     .frame {
         @apply !shadow-none;
+
+        pre {
+            max-height: 600px;
+            overflow-y: auto;
+        }
     }
 
     .title {
