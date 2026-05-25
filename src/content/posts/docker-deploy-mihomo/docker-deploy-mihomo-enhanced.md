@@ -3,7 +3,7 @@ title: 使用 Docker 部署 Mihomo 教程
 published: 2026-05-25
 description: 本文将使用绿联 NAS 设备讲述 Mihomo 的部署和使用。
 category: HomeLab
-draft: true
+draft: false
 tags:
   - NAS
   - Docker
