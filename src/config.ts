@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = {
 	},
 	// 站点统计
 	stats: {
-		startDate: "2026-01-01", // 建站日期，用于计算运行天数
+		startDate: "2026-5-20", // 建站日期，用于计算运行天数
 	},
 	toc: {
 		enable: true, // Display the table of contents on the right side of the post
