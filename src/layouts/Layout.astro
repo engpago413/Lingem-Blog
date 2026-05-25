@@ -73,7 +73,7 @@ const bannerOffset =
 ---
 
 <!DOCTYPE html>
-<html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]"
+<html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px] scroll-smooth"
 	  data-overlayscrollbars-initialize
 >
 	<head>
@@ -440,7 +440,7 @@ const setup = () => {
 				heightExtend.classList.add('hidden')
 			}
 
-            // Just make the transition looks better
+			// Just make the transition looks better
             const toc = document.getElementById('toc-wrapper');
             if (toc) {
                 toc.classList.remove('toc-not-ready')

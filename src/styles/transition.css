@@ -1,6 +1,6 @@
 /* Page transition animations with Swup */
 html.is-changing .transition-swup-fade {
-    @apply transition-all duration-200
+    transition: opacity 200ms ease, transform 200ms ease;
 }
 html.is-animating .transition-swup-fade {
     @apply opacity-0 translate-y-4
