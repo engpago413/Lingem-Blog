@@ -117,5 +117,16 @@
         overflow-x: auto;
         margin: 1em 0;
     }
-    
+
+    spoiler {
+        @apply rounded px-1 py-0.5 cursor-pointer transition-colors duration-200;
+        background-color: var(--deep-text);
+        color: transparent;
+        user-select: none;
+
+        &:hover, &:active {
+            color: var(--deep-text);
+            background-color: transparent;
+        }
+    }
 }
