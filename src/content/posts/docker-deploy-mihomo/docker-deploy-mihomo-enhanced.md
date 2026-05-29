@@ -1,7 +1,7 @@
 ---
 title: 使用 Docker 部署 Mihomo 教程
 published: 2026-05-25
-description: 本文将使用绿联 NAS 设备讲述 Mihomo 的部署和使用。
+description: 以绿联 DX4600-Pro 为例，从零开始讲解如何通过 Docker 部署 Mihomo 代理核心与 MetaCubeXD 管理面板。文章涵盖 Mihomo 配置文件的描述，docker-compose 编排，以及部署完成后的代理接入方式——包括设备系统代理设置、Docker 容器代理环境变量配置，以及手动指定节点的方法。
 category: HomeLab
 draft: false
 tags:
